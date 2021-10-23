@@ -69,8 +69,8 @@ read -n 1 installVPN
 if [[ "${installVPN,,}" == "y" ]]; then
 	declare -a VPNS=('NordVPN' 'ExpressVPN' 'ProtonVPN')
 	echo "Install which VPN?"
-	for val in ${StringArray[@]}; do
-		str="${k}. ${VPNs[$k-1]}"
+	for val in ${VPNS[@]}; do
+		str="${k}. ${VPNS[$k-1]}"
 		echo "${str}"
 	done
 	echo "[1-${#VPNS[@]}]: "
